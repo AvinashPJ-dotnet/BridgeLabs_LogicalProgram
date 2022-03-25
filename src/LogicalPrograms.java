@@ -27,9 +27,23 @@ public class LogicalPrograms {
                     break;
                 }
             }
-
         }while (flag==false && divisorSum<num);
         System.out.println(flag);
 
+    }
+
+    public boolean primeNumber(int num){
+        int divisor=2;
+        boolean flag = true;
+        if( num==0||num==1)
+            flag=false;
+        while(divisor<(num/2)+1){
+            if(num%(divisor)==0){
+                flag=false;
+                break;
+            }
+            divisor++;
+        }
+        return flag;
     }
 }
