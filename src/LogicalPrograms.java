@@ -1,4 +1,7 @@
+import java.util.LinkedHashSet;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.Set;
 
 public class LogicalPrograms {
     public void computeFibbonacci(int num){
@@ -74,7 +77,7 @@ public class LogicalPrograms {
                     break;
                 case 2:
                     time1 = elapsedTime();
-                    System.out.printf("(%.2f seconds)\n", time1);
+                    System.out.printf("(Total seconds)\n", time1);
                     break;
                 default:
                     System.out.println("Invaid choice");
@@ -86,5 +89,22 @@ public class LogicalPrograms {
     public double elapsedTime() {
         long now = System.currentTimeMillis();
         return (now - start) / 1000.0;
+    }
+
+
+    //N distinct coupon number code
+    public void generateDistinctCouponNumber(int n) {
+//        for (int i = 0; i < n; i++) {
+//            System.out.println(Math.random()*1000000);
+//            double randomNumber=Math.round((int)Math.random()*10000);
+//            System.out.println(randomNumber);
+//        }
+        Random randNum = new Random();
+        Set<Integer> set = new LinkedHashSet<Integer>();
+        while (set.size() < n) {
+            set.add(randNum.nextInt(5468486)+1);
+        }
+        System.out.println("Distinct random numbers = "+set);
+
     }
 }

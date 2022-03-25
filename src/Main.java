@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         LogicalPrograms objLogicalProgram = new LogicalPrograms();
         short ch = 0;
-        System.out.printf("\n1. Fibbonacci Number\n2. Perfect Number\n3. Prime Number\n4. ReverseNumber\n5. Stop Watch\n0. Exit\n");
+        System.out.printf("\n1. Fibbonacci Number\n2. Perfect Number\n3. Prime Number\n4. ReverseNumber\n5. Distinct Coupon\n6. Stop Watch\n0. Exit\n");
         Scanner in = new Scanner(System.in);
         System.out.print("Enter choice: ");
         ch = in.nextShort();
@@ -24,6 +24,9 @@ public class Main {
                 System.out.println("reverse number is: " + reverseNumber);
                 break;
             case 5:
+                objLogicalProgram.generateDistinctCouponNumber(5);
+                break;
+            case 6:
                 objLogicalProgram.stopWatch();
                 break;
             default:
