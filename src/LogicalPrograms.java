@@ -14,13 +14,12 @@ public class LogicalPrograms {
 
     public void checkPrefectNumber(int num){
         int divisorSum=0;
-        double divisor=0;
-        double temp=num;
+        int divisor=0;
+        int temp=num;
         boolean flag=false;
         do {
             divisor++;
             if ((temp % divisor) == 0) {
-//                temp /= divisor;
                 divisorSum += divisor;
                 if(divisorSum == num){
                     System.out.println("this is Perfect number");
@@ -28,13 +27,6 @@ public class LogicalPrograms {
                     break;
                 }
             }
-
-
-
-//            if (num % (divisor++) == 0) {
-//                divisorSum += 3;
-//                num /= 3;
-//            }
 
         }while (flag==false && divisorSum<num);
         System.out.println(flag);
