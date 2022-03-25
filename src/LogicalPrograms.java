@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class LogicalPrograms {
     public void computeFibbonacci(int num){
         int sum=0;
@@ -55,5 +57,34 @@ public class LogicalPrograms {
             number/=10;
         }
         return reverseNumber;
+    }
+
+    long start=0;
+    public void stopWatch(){
+        int ch=0;
+        do{
+            double time1=0;
+            System.out.println("1. Start watch \n2. Stop watch");
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter choice:");
+            ch=scanner.nextInt();
+            switch (ch){
+                case 1:start = System.currentTimeMillis();
+                    System.out.println("Started..");
+                    break;
+                case 2:
+                    time1 = elapsedTime();
+                    System.out.printf("(%.2f seconds)\n", time1);
+                    break;
+                default:
+                    System.out.println("Invaid choice");
+                    break;
+            }
+        }while (ch!=2);
+
+    }
+    public double elapsedTime() {
+        long now = System.currentTimeMillis();
+        return (now - start) / 1000.0;
     }
 }
