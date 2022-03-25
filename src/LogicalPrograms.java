@@ -46,4 +46,14 @@ public class LogicalPrograms {
         }
         return flag;
     }
+
+    public int reverseNumber(int number){
+        int reverseNumber=0;
+        while(number>0){
+            int reminder=number%10;
+            reverseNumber=reverseNumber*10+reminder;
+            number/=10;
+        }
+        return reverseNumber;
+    }
 }
