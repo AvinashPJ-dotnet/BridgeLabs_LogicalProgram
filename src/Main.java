@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        FibbonacciSeries fibbonacciSeries = new FibbonacciSeries();
-        fibbonacciSeries.computeFibbonacci(10);
+        LogicalPrograms objLogicalProgram = new LogicalPrograms();
+//        objLogicalProgram.computeFibbonacci(10);
+        objLogicalProgram.checkPrefectNumber(8128);//6, 28, 496,8128
     }
 }
