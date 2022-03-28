@@ -13,10 +13,10 @@ public class Main {
                 objLogicalProgram.computeFibbonacci(10);
                 break;
             case 2:
-                objLogicalProgram.checkPrefectNumber(8128);//6, 28, 496,8128
+                objLogicalProgram.checkPrefectNumber(495);//6, 28, 496,8128
                 break;
             case 3:
-                boolean isPrime = objLogicalProgram.primeNumber(7);
+                boolean isPrime = objLogicalProgram.primeNumber(1);
                 System.out.println("is prime: " + isPrime);
                 break;
             case 4:
