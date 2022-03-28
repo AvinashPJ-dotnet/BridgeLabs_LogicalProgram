@@ -24,7 +24,7 @@ public class Main {
                 System.out.println("reverse number is: " + reverseNumber);
                 break;
             case 5:
-                objLogicalProgram.generateDistinctCouponNumber(5);
+                objLogicalProgram.generateDistinctCouponNumber(10);
                 break;
             case 6:
                 objLogicalProgram.stopWatch();
